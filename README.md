@@ -1,5 +1,5 @@
 # mokasenes
-Hand made IoT system on Moka City.
+A handmade IoT system in Moka City.
 
 
 # System Overview
