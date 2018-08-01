@@ -21,3 +21,9 @@ Hand made IoT system on Moka City.
 
 https://github.com/ryu1k/mokasenes/blob/master/raspsense_output_sample.png
 
+
+# ToDo
+* システム全体の構成図の追加
+* raspi と TWELITE, LCD 等の結線図、回路図の追加
+* fluentd, influxDB, Grafana の設定情報の追加
+
