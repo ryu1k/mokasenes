@@ -1,0 +1,54 @@
+
+#
+# TWELITE firmware configuration value
+#  https://mono-wireless.com/jp/products/TWE-APPS/App_Tag/interactive.html
+#
+
+parent: @ 2018/1
+--- CONFIG/App_Tag V2-00-1/SID=0x81******/LID=0x00 ---
+ a: set Application ID (0x52ff****)
+ c: set Channels (15)
+ x: set Tx Power (3)
+ b: set UART baud (38400)
+ B: set UART option (8N1)
+ k: set Enc Key (0x********)
+ o: set Option Bits (0x00000001)
+---
+ S: save Configuration
+ R: reset to Defaults
+
+
+router @ 2018/4/21
+--- CONFIG/App_Tag V2-00-3/SID=0x81******/LID=0x00 ---
+ a: set Application ID (0x52ff****)
+ c: set Channels (15)
+ x: set Tx Power (3)
+ b: set UART baud (38400)
+ B: set UART option (8N1)
+ k: set Enc Key (0x********)
+ o: set Option Bits (0x00000001)
+ l: set layer (1)
+ A: set access point address (0x00000000)
+---
+ S: save Configuration
+ R: reset to Defaults
+
+
+child @ 2018/1
+--- CONFIG/App_Tag V2-00-1/SID=0x81******/LID=0x02/RC=8578 ---
+ a: set Application ID (0x52ff****)
+ i: set Device ID (2=0x02)
+ c: set Channels (15)
+ x: set Tx Power (13)
+ b: set UART baud (38400)
+ B: set UART option (8N1)
+ k: set Enc Key (0x********)
+ o: set Option Bits (0x00000001)
+ d: set Sleep Dur (60000)
+ w: set Sensor Wait Dur (30)
+ m: set Sensor Mode (0x32)
+ p: set Sensor Parameter (0)
+ P: set Sensor Parameter2 (  )
+---
+ S: save Configuration
+ R: reset to Defaults
