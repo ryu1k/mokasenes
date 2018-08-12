@@ -20,50 +20,59 @@ A handmade IoT system in Moka City.
 # Data flow
 
 * ADT7410
-  * Task: Temperature measurement
+  * Task:
+    * Temperature measurement
   * Output:
     * I2C -> TWELITE-DIP (App_Tag child)
 
 * TWELITE-DIP (App_Tag child)
-  * Task: Control ADT7410 and wireless transfer of data
+  * Task:
+    * Control ADT7410 and wireless transfer of data
   * Output:
     * IEEE 802.15.4 Wireless -> TWELITE-DIP (App_Tag parent)
 
 * TWELITE-DIP (App_Tag parent)
-  * Task: Wireless receiver  
+  * Task:
+    * Wireless receiver  
   * Output:
     * UART -> Raspberry Pi
 
 * Raspberry Pi
-  * Task: Process raw data and distribute it to utilize.
+  * Task:
+    * Process raw data and distribute it to utilize.
   * Output:
     * Display value in LCD
     * Slack incoming webhook API -> Slack
     * TCP -> td-agent-bit (fluentd lightwaight agent)
 
 * Slack
-  * Task: Notify event to human.
+  * Task:
+    * Notify event to human.
   * Output:
     * mention -> Notify High temperature, low battery voltate and so on.
 
 * td-agent-bit
-  * Task: forwad data to td-agent
+  * Task:
+    * forwad data to td-agent
   * Output:
     * TCP (Fluentd Forward Protocol) -> td-agent (On VPS)
 
 * td-agent
-  * Task: Gather data and put it to storage.
+  * Task:
+    * Gather data and put it to storage.
   * Output:
     * td-agent InfluxDB driver -> InfluxDB
     * stdout (to logfile) -> keep raw log
 
 * InfluxDB
-  * Task: Store data
+  * Task:
+    * Store data
   * Output:
     * database -> Will be used by Grafana
 
 * Grafana
-  * Task: View data and generate Event
+  * Task:
+    * View data and generate Event
   * Output:
     * Web UI -> Display data via Web Browser
     * Slack incoming webhook API -> Slack (Event trigger of Grafana)
