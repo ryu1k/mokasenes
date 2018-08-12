@@ -49,11 +49,11 @@ A handmade IoT system in Moka City.
   * Task:
     * Notify event to human.
   * Output:
-    * mention -> Notify High temperature, low battery voltate and so on.
+    * Mention -> Notify High temperature, low battery voltate and so on.
 
 * td-agent-bit
   * Task:
-    * forwad data to td-agent
+    * Forwad data to td-agent
   * Output:
     * TCP (Fluentd Forward Protocol) -> td-agent (On VPS)
 
@@ -62,20 +62,20 @@ A handmade IoT system in Moka City.
     * Gather data and put it to storage.
   * Output:
     * td-agent InfluxDB driver -> InfluxDB
-    * stdout (to logfile) -> keep raw log
+    * stdout (to logfile) -> Keep raw log instantly
 
 * InfluxDB
   * Task:
     * Store data
   * Output:
-    * database -> Will be used by Grafana
+    * Database -> Will be refered by by Grafana
 
 * Grafana
   * Task:
     * View data and generate Event
   * Output:
     * Web UI -> Display data via Web Browser
-    * Slack incoming webhook API -> Slack (Event trigger of Grafana)
+    * Slack incoming webhook API -> Slack (Events triggered by Grafana)
 
 
 # Screenshots
